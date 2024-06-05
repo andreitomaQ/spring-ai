@@ -10,7 +10,7 @@ services:
       - "8080:8080"
     environment:
       SPRING_PROFILES_ACTIVE: default
-      OPENAI_API_KEY: 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
+      OPENAI_API_KEY: '${OPEN_API_KEY}'
     networks:
       - spring-ai-network
 
