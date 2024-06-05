@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  spring-ai-app:
+    image: spring-ai:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_PROFILES_ACTIVE: default
+      OPENAI_API_KEY: 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
+    networks:
+      - spring-ai-network
+
+networks:
+  spring-ai-network:
+    driver: bridge
